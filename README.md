@@ -1,6 +1,6 @@
-Optimal-Pathfinding-Engine-on-2D-Grid-Maps
+Optimal Pathfinding Engine on 2D Grid Maps
 
-A C-based pathfinding engine for 2D grid maps that calculates minimum-cost paths with complex altitude constraints and bidirectional teleportation logic. It implements Dijkstra-based graph traversal and validates node properties using Fibonacci sequence algorithms to optimize movement efficiency.
+This repository contains the implementation of a pathfinding engine developed to calculate minimum-cost paths on 2D grid maps under complex movement constraints. The project models a traversal problem where movement is restricted by altitude differences (represented by ASCII values) and optimized through bidirectional teleportation nodes validated by mathematical sequences.
 
 Project Overview
 
@@ -53,9 +53,10 @@ A move from cell A to an adjacent cell B is valid only if the altitude differenc
 
 Teleportation Logic
 
-A cell located at row r and column c on a map of width W is a candidate for a teleportation portal if its calculated ID satisfies specific criteria.
+A cell located at row r and column c on a map of width W is a candidate for a teleportation portal if its calculated ID satisfies specific criteria:
 ID = (r * W) + c
-The ID must correspond to a Fibonacci number that matches one of the provided "key" values in the input dataset.
+
+The ID must correspond to a Fibonacci number that matches one of the provided "key" values (M1 or M2) in the input dataset.
 
 Compilation and Execution
 
